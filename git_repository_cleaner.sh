@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# This script processes all Git repositories in the specified directory.
+# For each repository, it performs the following tasks:
+# 1. Discards all local changes.
+# 2. Updates the default branch (either 'master' or 'main') to the latest commit.
+# 3. Deletes all local branches except for the default branch.
+
 # Check if a directory argument is provided
 if [ -z "$1" ]; then
   echo "Usage: $0 <repositories_directory>"
